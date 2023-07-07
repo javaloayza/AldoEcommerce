@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "http://localhost:1313"
+baseURL = "https://aldoshop.netlify.app"
 languageCode = "en-us"
 title = "Aldo Hugo | E-commerce "
 theme = "adrian-hugo"
