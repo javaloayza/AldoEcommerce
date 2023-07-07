@@ -1,0 +1,3 @@
+[submodule "themes/adrian-hugo"]
+  path = themes/adrian-hugo
+  url = "https://github.com/javaloayza/AldoEcommerce.git"
