@@ -17,7 +17,7 @@ company:
           content: "+880-31-000-000"
 
         - icon: "ti-email" # themify icon pack : https://themify.me/themify-icons
-          content: "hello@example.com"
+          content: "postventa@aldoshop.com"
 
     # office loop
     - name: "Branch Office"
@@ -29,7 +29,7 @@ company:
           content: "+880-31-000-000"
 
         - icon: "ti-email" # themify icon pack : https://themify.me/themify-icons
-          content: "hello@example.com"
+          content: ventas@aldoshop.com"
 
 ########################### Map #################################
 map:
