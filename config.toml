@@ -1,192 +1,309 @@
 ######################## default configuration ####################
+
+# Configuración predeterminada del sitio
+
 baseURL = "https://aldoshop.netlify.app"
+# La URL base del sitio web. Asegúrate de que sea la URL correcta del sitio.
+
 languageCode = "en-us"
-title = "Aldo Hugo | E-commerce "
+# Código de idioma del sitio. Utiliza el formato de código de idioma ISO 639-1.
+
+title = "Aldo Hugo | E-commerce"
+# Título del sitio web. Este será el título que aparecerá en la pestaña del navegador y en otros lugares relevantes.
+
 theme = "adrian-hugo"
+# El nombre del tema que se utilizará para el sitio. Asegúrate de que el tema esté instalado en el directorio de temas.
+
 summaryLength = "20"
+# Longitud máxima del resumen que se mostrará en las páginas, en número de palabras.
+
 paginate = 6
-disqusShortname = "aldoEcommerce-template"    #get your shortname form : disqus.com
+# Número de artículos que se mostrarán por página en las listas de contenido paginado, como la página principal.
+
+disqusShortname = "aldoEcommerce-template"
+# Nombre corto (shortname) de Disqus para comentarios. Asegúrate de haber creado un sitio en Disqus y de haber obtenido este nombre corto.
+
 # google analytics
-googleAnalytics = "" # example : UA-123-45
+googleAnalytics = ""
+# ID de seguimiento de Google Analytics. Si tienes una cuenta de Google Analytics y deseas rastrear el tráfico del sitio, puedes agregar aquí tu ID de seguimiento en el formato "UA-XXXXX-X".
+
+# Ejemplo: googleAnalytics = "UA-123-45"
 
 ############################ Output ###############################
+
+# Configuración de las salidas del sitio
+
 [outputs]
 home = ["HTML", "AMP", "RSS", "JSON"]
+# Especifica qué formatos de salida se generarán para la página de inicio del sitio.
+
+# - "HTML": Páginas HTML normales generadas para la página de inicio.
+# - "AMP": Páginas Accelerated Mobile Pages (AMP) generadas para la página de inicio, lo que permite una carga más rápida en dispositivos móviles.
+# - "RSS": Un feed RSS generado para la página de inicio, lo que permite a los usuarios suscribirse a las actualizaciones del sitio.
+# - "JSON": Datos JSON generados para la página de inicio, lo que puede ser útil para ciertos casos de integración o desarrollo.
 
 ############################# Taxonomies ###########################
+
+# Configuración de las taxonomías del sitio
+
 [taxonomies]
 category = "categories"
+# Taxonomía "category". Las categorías se utilizarán para clasificar y organizar contenido en el sitio. Por ejemplo, podrías tener categorías como "Ropa", "Zapatos", "Accesorios", etc.
+
 color = "colors"
+# Taxonomía "color". Los colores se utilizarán para etiquetar o clasificar productos por colores disponibles.
+
 size = "sizes"
+# Taxonomía "size". Los tamaños se utilizarán para etiquetar o clasificar productos por tallas disponibles.
+
+# Puedes agregar más taxonomías si es necesario, simplemente repitiendo el patrón de "nombre de la taxonomía = "nombre en la estructura de carpetas"".
 
 ############################# Plugins ##############################
 
-# CSS Plugins
+# Configuración de los plugins CSS
+
 [[params.plugins.css]]
 link = "plugins/bootstrap/bootstrap.min.css"
+# Ruta al archivo CSS de Bootstrap. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.css]]
 link = "plugins/themify-icons/themify-icons.css"
+# Ruta al archivo CSS de los iconos Themify. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.css]]
 link = "plugins/slick/slick.css"
+# Ruta al archivo CSS del slider Slick. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.css]]
 link = "https://cdn.snipcart.com/themes/v3.1.0/default/snipcart.css"
+# Enlace externo al archivo CSS de Snipcart. Esta es una URL proporcionada por Snipcart para el diseño del carrito de compras. Asegúrate de que la URL sea válida y accesible.
 
-# JS Plugins
+# Configuración de los plugins JS
+
 [[params.plugins.js]]
 link = "plugins/jQuery/jquery.min.js"
+# Ruta al archivo JS de jQuery. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
+# Ruta al archivo JS de Bootstrap. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.js]]
 link = "plugins/SyoTimer/jquery.syotimer.min.js"
+# Ruta al archivo JS de SyoTimer. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.js]]
 link = "plugins/slick/slick.min.js"
+# Ruta al archivo JS del slider Slick. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.js]]
 link = "https://cdn.snipcart.com/themes/v3.1.0/default/snipcart.js"
+# Enlace externo al archivo JS de Snipcart. Esta es una URL proporcionada por Snipcart para el funcionamiento del carrito de compras. Asegúrate de que la URL sea válida y accesible.
+
 [[params.plugins.js]]
 link = "plugins/instafeed-js/instafeed.min.js"
+# Ruta al archivo JS de Instafeed.js. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.js]]
 link = "plugins/search/fuse.min.js"
+# Ruta al archivo JS de Fuse.js para la función de búsqueda. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.js]]
 link = "plugins/search/mark.js"
+# Ruta al archivo JS de Mark.js para resaltar resultados de búsqueda. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.js]]
 link = "plugins/search/search.js"
+# Ruta al archivo JS para la función de búsqueda en el sitio. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
+
 [[params.plugins.js]]
 link = "plugins/google-map/gmap.js"
+# Ruta al archivo JS de Google Maps. Asegúrate de que esta ruta sea válida y que el archivo esté presente en el directorio de tu proyecto.
 
 
 ############################## navigation ###############################
 
-# main menu
+# Configuración de la navegación del sitio
+
+# Menú principal
 [[menu.main]]
 name = "Shop"
 URL = "shop/"
 weight = 1
+# Nombre y enlace del primer elemento del menú principal. "Shop" será el texto del enlace, y "shop/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.main]]
 name = "About"
 URL = "about/"
 weight = 2
+# Nombre y enlace del segundo elemento del menú principal. "About" será el texto del enlace, y "about/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.main]]
 name = "Faq"
 URL = "faq/"
 weight = 3
+# Nombre y enlace del tercer elemento del menú principal. "Faq" será el texto del enlace, y "faq/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.main]]
 name = "Contact"
 URL = "contact/"
 weight = 4
+# Nombre y enlace del cuarto elemento del menú principal. "Contact" será el texto del enlace, y "contact/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
-
-# category menu
+# Menú de categorías
 [[menu.category]]
 name = "Bag"
 URL = "categories/bag/"
 weight = 1
+# Nombre y enlace del primer elemento del menú de categorías. "Bag" será el texto del enlace, y "categories/bag/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.category]]
 name = "Shirt"
 URL = "categories/shirt/"
 weight = 2
+# Nombre y enlace del segundo elemento del menú de categorías. "Shirt" será el texto del enlace, y "categories/shirt/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.category]]
 name = "Shoe"
 URL = "categories/shoe/"
 weight = 3
+# Nombre y enlace del tercer elemento del menú de categorías. "Shoe" será el texto del enlace, y "categories/shoe/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.category]]
 name = "Tops"
 URL = "categories/tops/"
 weight = 4
+# Nombre y enlace del cuarto elemento del menú de categorías. "Tops" será el texto del enlace, y "categories/tops/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
-# useful links
+# Enlaces útiles
 [[menu.useful_links]]
 name = "Shop"
 URL = "shop/"
 weight = 1
+# Nombre y enlace del primer enlace útil. "Shop" será el texto del enlace, y "shop/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.useful_links]]
 name = "About"
 URL = "about/"
 weight = 2
+# Nombre y enlace del segundo enlace útil. "About" será el texto del enlace, y "about/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.useful_links]]
 name = "Faq"
 URL = "faq/"
 weight = 3
+# Nombre y enlace del tercer enlace útil. "Faq" será el texto del enlace, y "faq/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.useful_links]]
 name = "Contact"
 URL = "contact/"
 weight = 4
+# Nombre y enlace del cuarto enlace útil. "Contact" será el texto del enlace, y "contact/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
-# footer menu
+# Menú del pie de página
 [[menu.footer]]
 name = "Privacy Policy"
 URL = "privacy-policy/"
 weight = 1
+# Nombre y enlace del primer elemento del menú del pie de página. "Privacy Policy" será el texto del enlace, y "privacy-policy/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.footer]]
 name = "Terms & Conditions"
 URL = "terms-conditions/"
 weight = 2
+# Nombre y enlace del segundo elemento del menú del pie de página. "Terms & Conditions" será el texto del enlace, y "terms-conditions/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.footer]]
 name = "Cookie Policy"
 URL = "cookie-policy/"
 weight = 3
+# Nombre y enlace del tercer elemento del menú del pie de página. "Cookie Policy" será el texto del enlace, y "cookie-policy/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 [[menu.footer]]
 name = "Terms of Sale"
 URL = "terms-of-sale/"
 weight = 4
+# Nombre y enlace del cuarto elemento del menú del pie de página. "Terms of Sale" será el texto del enlace, y "terms-of-sale/" será la URL a la que apunta. El peso (weight) determina el orden en el que aparece en el menú.
 
 #################### default parameters ################################
+
+# Configuración de parámetros predeterminados
+
 [params]
+
+# Ruta al archivo de logo del sitio
 logo = "/images/logoAldo2.png"
+
+# Texto para el enlace "Home" en la navegación
 home = "Home"
+
 # Meta data
 description = "This is meta description"
 author = "Aldo Loayza"
-# snipcart public api key
+
+# Clave pública de la API de Snipcart para el carrito de compras
 snipcartAPI = "ZDgxY2ZiM2EtMWRmMi00M2ZkLWI1MDAtNzA2MDc0Y2Q1MzJlNjM3MTAzNDIwOTQ1NDA4NjM4"
+
+# Símbolo de moneda que se utilizará para mostrar los precios
 currency = "$"
-# google map
+
+# API de Google Maps para mapas
 gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
+# Reemplaza "YOUR_API_KEY" con tu propia clave de API de Google Maps.
+
+# Latitud y longitud del marcador en el mapa
 mapLatitude = "51.5223477"
 mapLongitude = "-0.1622023"
+
+# Ruta al archivo de imagen del marcador en el mapa
 mapMarker = "images/marker.png"
-# Google Analitycs
+
+# ID de seguimiento de Google Analytics
 googleAnalitycsID = "Your ID"
-# Contact Information
+# Reemplaza "Your ID" con tu propio ID de seguimiento de Google Analytics.
+
+# Información de contacto
 mobile = "+51 956157575"
 email = "test@email.com"
 location = "Lima, Peru"
-# contact form action
-contactFormAction = "#" # contact form works with : https://formspree.io
-# footer content
+
+# Acción del formulario de contacto
+contactFormAction = "#"
+# El formulario de contacto funciona con : https://formspree.io
+# Reemplaza "#" con la URL de la acción del formulario de contacto si estás utilizando una plataforma de formularios externa como Formspree.
+
+# Contenido del pie de página
 footer_content = "Iste dolores iure quis excepturi, deserunt praesentium."
-# copyright
+
+# Derechos de autor
 copyright = "Designed & Developed By [Aldo Javier Loayza](https://aldoloayza.netlify.app)"
 
-# Preloader
+# Preloader (animación de carga)
 [params.preloader]
 enable = true
-preloader = "" # use .png , .svg or .gif format
+preloader = ""
+# Puedes usar formatos de imagen como .png, .svg o .gif para la animación de carga.
 
-# search
+# Búsqueda en el sitio
 [params.search]
 enable = true
+# Habilita o deshabilita la función de búsqueda en el sitio.
 
-# opening hours
+# Horario de apertura
+
 [[params.openingHour]]
 day = "Monday-Friday"
 time = "8.00-20.00"
+# Configuración del horario de atención para los días de lunes a viernes. El negocio abrirá a las 8:00 AM y cerrará a las 8:00 PM.
 
 [[params.openingHour]]
 day = "Saturday"
 time = "10.00-20.00"
+# Configuración del horario de atención para el día sábado. El negocio abrirá a las 10:00 AM y cerrará a las 8:00 PM.
 
 [[params.openingHour]]
 day = "Sunday"
 time = "12.00-20.00"
+# Configuración del horario de atención para el día domingo. El negocio abrirá a las 12:00 PM y cerrará a las 8:00 PM.
+
+# Fin de la sección "default parameters"
