@@ -6,3 +6,5 @@ description : "This is meta description"
 bgImage : "images/backgrounds/header-bg.jpg"
 ---
 
+<!-- This have a frontmatter customized, lo que esta dentro de "---" son metadatos -->
+

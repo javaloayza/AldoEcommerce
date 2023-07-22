@@ -2,10 +2,20 @@
   'use strict';
 
   // Preloader js    
-  $(window).on('load', function () {
-    $('.preloader').fadeOut(100);
-  });
+/* This code is attaching an event listener to the window's load event. When the window finishes
+loading, the function inside the event listener is executed. In this case, the function is fading
+out an element with the class "preloader" over a duration of 100 milliseconds. This is commonly used
+to hide a preloader or loading screen once the page has finished loading. */
+$(window).on('load', function () {
+  $('.preloader').fadeOut(100);
+});
 
+/* The code is initializing a slider using the Slick library on an element with the class
+"main-slider". The slider is set to show 1 slide at a time and scroll 1 slide at a time. It has
+infinite looping enabled, meaning it will continuously loop through the slides. The dots
+navigation is disabled, but the arrows navigation is enabled. The slider will autoplay with a
+speed of 6000 milliseconds (6 seconds). The previous arrow is customized with a specific HTML
+structure and icon, and the next arrow is also customized with a specific HTML structure and icon. */
   $('.main-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -43,6 +53,8 @@
   });
 
   // product Slider
+  /* The code is initializing a slider using the Slick library on an element with the class
+  "single-product-slider". */
   $('.single-product-slider').slick({
     autoplay: false,
     infinite: true,

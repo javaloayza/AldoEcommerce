@@ -1,19 +1,23 @@
 {{ define "main" }}
 
 <!-- slider -->
-{{ if site.Data.homepage.slider.enable }}
-{{ with site.Data.homepage.slider }}
+{{ if site.Data.homepage.slider.enable }} <!-- Comprueba si el slider está habilitado en la configuración -->
+{{ with site.Data.homepage.slider }} <!-- Accede a los datos del slider desde la configuración del sitio web -->
 <div class="main-slider slider">
+  <!-- Loop through each slider item -->
   {{ range .sliderItem }}
   <div class="slider-item " style="background-image:url('{{ .bgImage | relURL }}')">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-12 offset-lg-6 offset-md-6">
           <div class="slider-caption">
+            <!-- Display the subtitle of the slider item -->
             <span class="lead">{{ .subtitle | markdownify }}</span>
+            <!-- Display the title of the slider item -->
             <h1 class="mt-2 mb-5 title">{{ .title | markdownify }}</h1>
             {{ if .button.enable }}
             {{ with .button }}
+            <!-- Check if a button is enabled for the slider item -->
             <a href="{{ .link | relURL }}" class="btn btn-main">{{ .label }}</a>
             {{ end }}
             {{ end }}
@@ -27,29 +31,31 @@
 {{ end }}
 {{ end }}
 
+
 <!-- category -->
-{{ if site.Data.homepage.categories.enable }}
-{{ with site.Data.homepage.categories }}
-<section class="category section pt-3 pb-0">
+{{ if site.Data.homepage.categories.enable }} <!-- Verifica si la sección de categorías está habilitada -->
+{{ with site.Data.homepage.categories }} <!-- Establece el contexto de trabajo en los datos de las categorías de la página de inicio -->
+<section class="category section pt-3 pb-0"> <!-- Inicia la sección de categorías -->
   <div class="container">
     <div class="row">
-      {{ range .category }}
+      {{ range .category }} <!-- Itera sobre cada categoría en la lista de categorías -->
       <div class="col-lg-4 col-sm-12 col-md-6">
         <div class="cat-item mb-4 mb-lg-0">
-          <img src="{{ .image | relURL }}" alt="category" class="img-fluid">
+          <img src="{{ .image | relURL }}" alt="category" class="img-fluid"> <!-- Muestra la imagen de la categoría -->
           <div class="item-info">
-            <p class="mb-0">{{ .title | markdownify }}</p>
-            <h4 class="mb-4">{{ .offer | markdownify }}</h4>
-            <a href="{{ `categories/` | relURL }}{{ .link }}" class="read-more">Shop now</a>
+            <p class="mb-0">{{ .title | markdownify }}</p> <!-- Muestra el título de la categoría -->
+            <h4 class="mb-4">{{ .offer | markdownify }}</h4> <!-- Muestra la oferta de la categoría -->
+            <a href="{{ `categories/` | relURL }}{{ .link }}" class="read-more">Shop now</a> <!-- Crea un enlace a la página de la categoría -->
           </div>
         </div>
       </div>
-      {{ end }}
+      {{ end }} <!-- Finaliza la iteración -->
     </div>
   </div>
-</section>
-{{ end }}
-{{ end }}
+</section> <!-- Finaliza la sección de categorías -->
+{{ end }} <!-- Finaliza el contexto de trabajo en los datos de las categorías de la página de inicio -->
+{{ end }} <!-- Finaliza la verificación de si la sección de categorías está habilitada -->
+
 
 <!-- new arrival -->
 {{ if site.Data.homepage.newArrival.enable }}
